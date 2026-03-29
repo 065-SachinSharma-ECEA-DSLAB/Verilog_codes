@@ -28,7 +28,7 @@ module bcd_adder(input [3:0]a_bcd, [3:0]b_bcd, c_in, output[3:0]sum_bcd,output c
    rca_4bit rca1(a_bcd,b_bcd,c_in,sum_temp,cout_temp);
    and a_1(a1,sum_temp[3],sum_temp[2]);
    and a_2(a2,sum_temp[3],sum_temp[1]);
-   or o_1(o1,a1,a2);
+   or o_1(o1,a1,a2,cout_temp);
    
    wire [3:0]b_rca2;
    assign b_rca2[0]=0;
